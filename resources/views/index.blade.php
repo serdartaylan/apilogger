@@ -55,6 +55,9 @@
                             </span>
                             <large class= "col-md-3"><b>Duration : </b>{{$log->duration * 1000}}ms</large>
                             <large class= "col-md-3"><b>Date : </b>{{$log->created_at}}</large>
+                            @if ($log->user_id)
+                                <large class= "col-md-3"><b>User : </b>{{\App\Models\User::find($log->user_id)->name}}</large>
+                            @endif
                             <p class="col-md-3 mb-1"><b>IP :</b> {{$log->ip}}</p>
                         </div>
                         <hr>

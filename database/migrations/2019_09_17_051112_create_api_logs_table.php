@@ -24,6 +24,7 @@ class CreateApiLogsTable extends Migration
             $table->string('action');
             $table->string('models');
             $table->string('ip');
+            $table->string('user_id')->nullable();
             $table->timestamps();
         });
     }

@@ -3,6 +3,7 @@
 namespace AWT;
 
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
@@ -82,6 +83,7 @@ abstract class AbstractLogger{
         $this->logs['controller'] = $controller;
         $this->logs['action'] = $action;
         $this->logs['models'] = $models;
+        $this->logs['user_id'] = Auth::id();
         $this->logs['ip'] = $request->ip();
 
         return $this->logs;
