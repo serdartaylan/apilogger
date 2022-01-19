@@ -4,8 +4,8 @@
             "AWT\\": "src/"
         }
     },
-    "name": "awt/apilogger",
-    "description": "Small laravel package for viewing api logs which can be used in debugging.",
+    "name": "serdartaylan/apilogger",
+    "description": "fork of awt/apilogger, jadayash/apilogger",
     "type": "library",
     "license": "MIT",
     "authors": [
